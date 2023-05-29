@@ -3,6 +3,14 @@ import { Home } from './pages/Home'
 import './App.css'
 import { Footer } from './components/template/Footer'
 import { Header } from './components/template/Header'
+import { LoginRegistrarse } from './pages/LoginRegistrarse'
+import { Registrarse } from './pages/Registrarse'
+import { Reproducir } from './pages/Reproducir'
+import { Review } from './pages/Review'
+import { PanelUsuario } from './pages/PanelUsuario'
+import { AdminUsuarios } from './pages/AdminUsuarios'
+import { AdminPeliculas } from './pages/AdminPeliculas'
+import { Error } from './pages/Error'
 
 function App() {
   return (
@@ -11,6 +19,14 @@ function App() {
         <Header />
         <Routes>
           <Route path="/" element={<Home />} />
+          <Route path="/login-registrarse" element={<LoginRegistrarse />} />
+          <Route path="/registrarse" element={<Registrarse />} />
+          <Route path="/reproducir" element={<Reproducir />} />
+          <Route path="/review" element={<Review />} />
+          <Route path="/panel-usuario" element={<PanelUsuario />} />
+          <Route path="/admin-usuarios" element={<AdminUsuarios />} />
+          <Route path="/admin-peliculas" element={<AdminPeliculas />} />
+          <Route path="*" element={<Error />} />
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -1,4 +1,4 @@
-# <img src="https://img.icons8.com/bubbles/40/null/react.png" alt="react" widht="40" height="40" /> react Proyecto final de Codo a Codo - React - Grupo 1
+# <img src="https://img.icons8.com/bubbles/40/null/react.png" alt="react" widht="40" height="40" /> Proyecto final de Codo a Codo - React - Grupo 1
 
 ---
 
