@@ -22,7 +22,7 @@ export const Registrarse = () => {
       <h2>Registrarse</h2>
       <Form>
         <Row>
-          <Col>
+          <Col sm={12} md={6}>
             <FormGroup type="text" 
                       texto="Nombre" 
                       controlId="formBasicName" 
@@ -39,7 +39,7 @@ export const Registrarse = () => {
                        placeholder="Telefono"/>
      
           </Col>
-          <Col>
+          <Col  sm={12} md={6}>
             <FormGroup type="email" 
                       texto="Email" 
                       controlId="formBasicEmail" 
@@ -57,7 +57,7 @@ export const Registrarse = () => {
      
           </Col>
         </Row>
-        <Container className="d-flex justify-content-lg-end">
+        <Container className="d-grid d-md-flex justify-content-center justify-content-lg-end  gap-2">
           <BotonSuccess type={tipo} 
                         texto="Aceptar" 
                         onSubmit={validacion} />
