@@ -15,7 +15,7 @@ const Message = ({ msg, bgColor }) => {
 
   return (
     <Row as="div" style={styles}>
-      <Col sm={{ span: 6, offset: 3 }}>
+      <Col sm={{ span: 10, offset: 2 }}>
         <p className="msg" dangerouslySetInnerHTML={{ __html: msg }} />
       </Col>
     </Row>

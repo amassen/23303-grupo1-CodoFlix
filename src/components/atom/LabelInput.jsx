@@ -29,11 +29,12 @@ export const LabelInput = ({
         required
       />
       {errorsItem && (
-        <p
+        <p className="py-2"
           style={
             styles
               ? styles
               : {
+                  fontSize: '16px',
                   fontWeight: 'bold',
                   color: '#dc3545'
                 }
