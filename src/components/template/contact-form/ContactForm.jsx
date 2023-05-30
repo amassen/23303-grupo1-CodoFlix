@@ -34,7 +34,7 @@ const validationsForm = (form) => {
   if (!form.telephone) {
     errors.telephone = ERROR_REQUIRED.telephone
   } else if (!regexPhone.test(form.telephone.trim())) {
-    errors.telephone = ERROR_MSG.telephone 
+    errors.telephone = ERROR_MSG.telephone
   }
 
   if (!form.subject.trim()) {
@@ -44,7 +44,7 @@ const validationsForm = (form) => {
   if (!form.comments.trim()) {
     errors.comments = ERROR_REQUIRED.comments
   } else if (!regexComments.test(form.comments.trim())) {
-    errors.comments = ERROR_MSG.comments 
+    errors.comments = ERROR_MSG.comments
   }
 
   return errors
@@ -57,7 +57,7 @@ let styles = {
   padding: '12px 0px'
 }
 
-const ContactForm = () => {
+export const ContactForm = () => {
   const {
     form,
     errors,
@@ -69,7 +69,7 @@ const ContactForm = () => {
   } = useForm(initialForm, validationsForm)
 
   return (
-    <section className="container">
+    <section>
       <h2 className="text-center py-5">Contacto</h2>
       <Form onSubmit={handleSubmit} className="container">
         <div className="row">
@@ -148,5 +148,3 @@ const ContactForm = () => {
     </section>
   )
 }
-
-export default ContactForm
