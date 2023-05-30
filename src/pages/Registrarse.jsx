@@ -1,13 +1,14 @@
 import { Form, Row, Col, Container } from 'react-bootstrap';
-import BotonAceptar from './../components/template/BotonAceptar';
-import BotonCancelar from './../components/template/BotonCancelar';
+import FormGroup from '../components/template/FormGroup';
+import BotonSuccess from '../components/template/BotonSuccess';
+import BotonOutlineDanger from '../components/template/BotonOutlineDanger';
 import { useState } from 'react';
 
 export const Registrarse = () => {
 
   const [validate, setValidate]=useState(false);
   const tipo="submit"
-  const bg=`bg`
+  const bg="bg"
 
   const validacion=()=>{
     if(!validate){
@@ -22,47 +23,47 @@ export const Registrarse = () => {
       <Form>
         <Row>
           <Col>
-          <Form.Group className="mb-3" controlId="formBasicName">
-          <Form.Label>Nombre</Form.Label>
-          <Form.Control type="text" placeholder="Nombre" />
-        </Form.Group>
+            <FormGroup type="text" 
+                      texto="Nombre" 
+                      controlId="formBasicName" 
+                      placeholder="Nombre"/>
 
-        <Form.Group className="mb-3" controlId="formBasicLastName">
-          <Form.Label>Apellido</Form.Label>
-          <Form.Control type="text" placeholder="Apellido" />
-        </Form.Group>
+            <FormGroup type="text" 
+                       texto="Apellido" 
+                       controlId="formBasicLastName" 
+                       placeholder="Apellido"/>
 
-        <Form.Group className="mb-3" controlId="formBasicPhone">
-          <Form.Label>Telefono</Form.Label>
-          <Form.Control type="number" placeholder="Telefono" />
-        </Form.Group> 
-      </Col>
-      <Col>
-      <Form.Group className="mb-3" controlId="formBasicEmail">
-          <Form.Label>Correo</Form.Label>
-          <Form.Control type="email" placeholder="E-mail" />
-          {/* <Form.Text className="text-muted">
-            Tus correo está protegido.
-          </Form.Text> */}
-        </Form.Group>
+            <FormGroup type="number" 
+                       texto="Telefono" 
+                       controlId="formBasicPhone" 
+                       placeholder="Telefono"/>
+     
+          </Col>
+          <Col>
+            <FormGroup type="email" 
+                      texto="Email" 
+                      controlId="formBasicEmail" 
+                      placeholder="E-mail"/>
 
-        <Form.Group className="mb-3" controlId="formBasicPassword">
-          <Form.Label>Contraseña</Form.Label>
-          <Form.Control type="password" placeholder="Contraseña" />
-        </Form.Group>
+            <FormGroup type="password" 
+                      texto="Password" 
+                      controlId="formBasicPassword" 
+                      placeholder="Password"/>
 
-        <Form.Group className="mb-3" controlId="formBasicPasswordConfirmation">
-          <Form.Label>Repita Contraseña</Form.Label>
-          <Form.Control type="password" placeholder="Contraseña" />
-        </Form.Group>
-      </Col>
-
+            <FormGroup type="password" 
+                      texto="Confirme contraseña" 
+                      controlId="formBasicPasswordConfirmation" 
+                      placeholder="Repetir Contraseña"/>
+     
+          </Col>
         </Row>
         <Container className="d-flex justify-content-lg-end">
-        <BotonAceptar type={tipo}>
-        </BotonAceptar>
-        <BotonCancelar type={tipo}>
-        </BotonCancelar>
+          <BotonSuccess type={tipo} 
+                        texto="Aceptar" 
+                        onSubmit={validacion} />
+          <BotonOutlineDanger 
+                        type={tipo} 
+                        texto="Cancelar" />
         </Container>
       </Form>
       
