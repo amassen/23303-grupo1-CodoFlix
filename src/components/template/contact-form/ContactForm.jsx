@@ -5,13 +5,15 @@ import { LabelInput } from '../../atom/LabelInput'
 import Loader from '../../atom/Loader'
 import Message from '../../atom/Message'
 import { initialForm, ERROR_REQUIRED, ERROR_MSG } from './utils'
+import {
+  regexName,
+  regexEmail,
+  regexPhone,
+  regexComments
+} from '../../../utils/constants'
 
 const validationsForm = (form) => {
   let errors = {}
-  let regexName = /^[A-Za-zÑñÁáÉéÍíÓóÚúÜü\s]+$/
-  let regexEmail = /^(\w+[/./-]?){1,}@[a-z]+[/.]\w{2,}$/
-  let regexPhone = /^([0-9]{10,13})$/
-  let regexComments = /^.{1,255}$/
 
   if (!form.firstName) {
     errors.firstName = ERROR_REQUIRED.firstName
@@ -135,12 +137,13 @@ export const ContactForm = () => {
             {errors.comments && <p style={styles}>{errors.comments}</p>}
           </div>
         </div>
-        <Row>{loading && <Loader text="Enviando los datos..."/>}</Row>
+        <Row>{loading && <Loader text="Enviando los datos..." />}</Row>
         <Row>
           {response && (
-            <Message 
-              msg="Los datos han sido enviados correctamente" 
-              bgColor="white" />
+            <Message
+              msg="Los datos han sido enviados correctamente"
+              bgColor="white"
+            />
           )}
         </Row>
         <Row as="div" className="d-grid gap-2 col-6 mx-auto py-3">
