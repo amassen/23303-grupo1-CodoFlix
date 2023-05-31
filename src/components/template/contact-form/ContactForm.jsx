@@ -71,7 +71,7 @@ export const ContactForm = () => {
   return (
     <section>
       <h2 className="text-center py-5">Contacto</h2>
-      <Form onSubmit={handleSubmit} className="container">
+      <Form onSubmit={handleSubmit} className="container text-start">
         <div className="row">
           <div className="col-sm-12 col-md-6 mb-3">
             <LabelInput
@@ -135,6 +135,14 @@ export const ContactForm = () => {
             {errors.comments && <p style={styles}>{errors.comments}</p>}
           </div>
         </div>
+        <Row>{loading && <Loader text="Enviando los datos..."/>}</Row>
+        <Row>
+          {response && (
+            <Message 
+              msg="Los datos han sido enviados correctamente" 
+              bgColor="white" />
+          )}
+        </Row>
         <Row as="div" className="d-grid gap-2 col-6 mx-auto py-3">
           <Form.Control
             className="btn btn-success"
@@ -143,8 +151,6 @@ export const ContactForm = () => {
           />
         </Row>
       </Form>
-      {loading && <Loader />}
-      {response && <Message msg="Los datos han sido enviados" />}
     </section>
   )
 }

@@ -5,12 +5,16 @@ import { Col, Row } from 'react-bootstrap'
 * Componente para mostrar mensajes
 * REcibe por props:
 * -msg: el mensaje que se va a mostrar
-* -bgColor: el color de fondo, tneer en cuenta que por default el texto 
-* es blanco, si no recibe color de fondo esta seteado a negro por default 
+* -bgColor: el color de fondo, por default es negro, si recibe prop 
+* se personaliza.
+* -txtColor: el color del texto, por default es negro, si recibe prop
+* se personaliza.
 */
-const Message = ({ msg, bgColor }) => {
+const Message = ({ msg, bgColor, txtColor }) => {
   let styles = {
-    backgroundColor: bgColor ? bgColor : '#070000'
+    backgroundColor: bgColor ? bgColor : '#070000',
+    txtColor: txtColor ? txtColor: '#000',
+    fontWeight: 800,
   }
 
   return (
