@@ -61,7 +61,7 @@ export const useForm = (initialForm, validateForm) => {
           setLoading(false)
           setResponse(true)
           setForm(initialForm)
-          setTimeout(() => setResponse(false), 3000)
+          setTimeout(() => setResponse(false), 4000)
         })
     } else {
       return
