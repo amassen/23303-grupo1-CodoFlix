@@ -3,6 +3,7 @@ import FormGroup from '../components/template/FormGroup';
 import BotonSuccess from '../components/template/BotonSuccess';
 import BotonOutlineDanger from '../components/template/BotonOutlineDanger';
 import { useState } from 'react';
+import { HeadlineH2 } from '../components/atom/Headlineh2'
 
 export const Registrarse = () => {
 
@@ -61,87 +62,6 @@ export const Registrarse = () => {
     }
 
   return (
-    <div className={`container w-50 ${bg} p-4`}>
-      <h2>Registrarse</h2>
-      <Form>
-        <Row>
-          <Col sm={12} md={6}>
-            <FormGroup type="text" 
-                      texto="Nombre" 
-                      controlId="name" 
-                      placeholder="Nombre"
-                      valor={form.name}
-                      onCambio={(e)=>setField('name',e.target.value)}
-                      esInvalido={errors.name}//!!
-                      feedbackType="invalid"
-                      typeError={errors.name}/>
-                      
-            <FormGroup type="text" 
-                       texto="Apellido" 
-                       controlId="lastName" 
-                       placeholder="Apellido"
-                       valor={form.lastName}
-                       onCambio={(e)=>setField('lastName',e.target.value)}
-                       esInvalido={errors.lastName}//!!
-                       feedbackType="invalid"
-                       typeError={errors.lastName}/>
-
-            <FormGroup type="number" 
-                       texto="Telefono" 
-                       controlId="phone" 
-                       placeholder="Telefono"
-                       valor={form.phone}
-                       onCambio={(e)=>setField('phone',e.target.value)}
-                       esInvalido={errors.phone}//!!
-                       feedbackType="invalid"
-                       typeError={errors.phone}/>
-          </Col>
-          <Col  sm={12} md={6}>
-            <FormGroup type="email" 
-                      texto="Email" 
-                      controlId="mail" 
-                      placeholder="E-mail"
-                      valor={form.mail}
-                      onCambio={(e)=>setField('mail',e.target.value)}
-                      esInvalido={errors.mail}//!!
-                      feedbackType="invalid"
-                      typeError={errors.mail}/>
-
-            <FormGroup type="password" 
-                      texto="Contraseña" 
-                      controlId="pass" 
-                      placeholder="Password"
-                      valor={form.pass}
-                      onCambio={(e)=>setField('pass',e.target.value)}
-                      esInvalido={errors.pass}//!!
-                      feedbackType="invalid"
-                      typeError={errors.pass}/>
-
-            <FormGroup type="password" 
-                      texto="Confirme contraseña" 
-                      controlId="cpass" 
-                      placeholder="Repetir Contraseña"
-                      valor={form.cpass}
-                      onCambio={(e)=>setField('cpass',e.target.value)}
-                      esInvalido={errors.cpass}//!!
-                      feedbackType="invalid"
-                      typeError={errors.cpass}/>
-     
-          </Col>
-        </Row>
-        <Container className="d-grid d-md-flex justify-content-center justify-content-lg-end  gap-2">
-          <BotonSuccess type={tipo} 
-                        texto="Aceptar" 
-                        enClick={handleSubmit}
-                        />
-          <BotonOutlineDanger 
-                        type={tipo} 
-                        texto="Cancelar" 
-                        enClick={console.log("cancelado")}
-                        />
-        </Container>
-      </Form>
-      
-    </div>
-  );
-};
+    <div>Registrarse</div>
+  )
+}
