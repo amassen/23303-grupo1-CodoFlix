@@ -11,6 +11,7 @@ import {
   regexPhone,
   regexComments
 } from '../../../utils/constants'
+import { HeadlineH2 } from '../../atom/Headlineh2'
 
 const validationsForm = (form) => {
   let errors = {}
@@ -72,7 +73,7 @@ export const ContactForm = () => {
 
   return (
     <section>
-      <h2 className="text-center py-5">Contacto</h2>
+      <HeadlineH2 headlineText="Contacto" />
       <Form onSubmit={handleSubmit} className="container text-start">
         <div className="row">
           <div className="col-sm-12 col-md-6 mb-3">
