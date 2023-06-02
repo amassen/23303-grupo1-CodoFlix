@@ -138,7 +138,7 @@ export const ContactForm = () => {
             {errors.comments && <p style={styles}>{errors.comments}</p>}
           </div>
         </div>
-        <Row>{loading && <Loader text="Enviando los datos..." />}</Row>
+        {loading && <Loader text="Enviando los datos..." />}
         <Row>
           {response && (
             <Message
