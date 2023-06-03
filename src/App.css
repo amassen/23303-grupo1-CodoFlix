@@ -1,0 +1,30 @@
+/* 
+Clase para aplicar a los divs o sections contenedores 
+de cada pagina para que tengan un minimo de alto 
+y el footer no quede volando. Simula un contenedor 
+con un maximo de ancho y centrado
+*/
+.fullHeight {
+  min-height: 94vh;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+Clase que se puede reutilizar en toda 
+la aplicacion para centrar elementos 
+*/
+.center-elements {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
