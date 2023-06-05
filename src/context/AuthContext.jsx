@@ -4,12 +4,12 @@ const AuthContext = createContext()
 
 // para simular que ya esta logueado el usuario, usar true
 // para ver si no esta logueado usar null
-const initialAuth = null
+const initialAuth = true
 
 const AuthProvider = ({ children }) => {
   const [auth, setAuth] = useState(initialAuth)
 
-  const handleAuth = (e) => {
+  const handleAuth = () => {
     if (auth) {
       setAuth(null)
     } else {

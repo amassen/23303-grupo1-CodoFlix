@@ -1,9 +1,23 @@
+/* Para los colores personalizados */
+:root {
+  --color-primary: #FDD306;
+  --color-secondary: #070000;
+  --color-gray: #D0D9D0;
+  --color-white: #FFF;
+}
+
 /* 
 Clase para aplicar a los divs o sections contenedores 
 de cada pagina para que tengan un minimo de alto 
 y el footer no quede volando. Simula un contenedor 
 con un maximo de ancho y centrado
 */
+.fullHeight-max-width-980 {
+  min-height: 94vh;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
 .fullHeight {
   min-height: 94vh;
   max-width: 980px;
@@ -27,4 +41,41 @@ la aplicacion para centrar elementos
   align-content: center;
   justify-content: center;
   align-items: flex-start;
+}
+
+/* Para poder personalizar el componente boton de bootstrap*/
+
+/* Para el BOTON PRIMARIO AMARILLO:
+-color de fondo amarillo
+-borde amarillo
+-letras negras*/
+button.btn-primary-full {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+button.btn-primary-full:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-psecondary);
+  color: var(--color-white);
+}
+/* Para el BOTON SECUNDARIO AMARILLO:
+-color de fondo blanco
+-borde amarillo
+-letras negras*/
+button.btn-primary-outline {
+  border-color: var(--color-primary);
+  color: var(--color-black);
+  background-color: var(--color-white);
+}
+
+/* Para el BOTON SECUNDARIO NEGRO
+-color de fondo transparente
+-borde amarillo
+-letras negras*/
+button.btn-primary-outline {
+  border: 2px solid var(--color-secondary);
+  color: var(--color-black);
+  background-color: transparent;
 }
