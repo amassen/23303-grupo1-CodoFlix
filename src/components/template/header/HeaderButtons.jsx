@@ -14,7 +14,9 @@ export const HeaderButtons = () => {
       {auth ? (
         <>
           <span>usuario</span>
-          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-false"/>
+          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-false"> 
+          <img width="50" height="50" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+          </Navbar.Toggle>
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-false"
             aria-labelledby="offcanvasNavbarLabel-expand-false"

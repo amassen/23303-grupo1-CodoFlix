@@ -42,6 +42,6 @@ header {
 }
 
 .navbar-toggler {
-  border-color: var(--color-secondary);
+  border: none;
   margin: 0px 12px
 }
