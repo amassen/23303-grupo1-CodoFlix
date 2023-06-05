@@ -14,6 +14,7 @@ import { AdminPeliculas } from './pages/AdminPeliculas'
 import { Error } from './pages/Error'
 import AuthContext from './context/AuthContext'
 import './App.css'
+
 function App() {
   const { auth } = useContext(AuthContext)
 
