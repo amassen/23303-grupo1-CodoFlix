@@ -10,28 +10,37 @@ export const HeaderButtons = () => {
   }
 
   return (
-    <Col>
+    <Col xs={12} md={3}>
       {auth ? (
         <>
           <span>usuario</span>
-          <Navbar.Toggle aria-controls={`offcanvasNavbar-expand-false`} />
+          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-false"/>
           <Navbar.Offcanvas
-            id={`offcanvasNavbar-expand-false`}
-            aria-labelledby={`offcanvasNavbarLabel-expand-false`}
+            id="offcanvasNavbar-expand-false"
+            aria-labelledby="offcanvasNavbarLabel-expand-false"
             placement="end"
           >
-            <Offcanvas.Header closeButton>
-              <Offcanvas.Title id={`offcanvasNavbarLabel-expand-false`}>
+            <Offcanvas.Header closeButton >
+              <Offcanvas.Title id="offcanvasNavbarLabel-expand-false">
                 Usuario
               </Offcanvas.Title>
             </Offcanvas.Header>
             <Offcanvas.Body>
               <Nav className="justify-content-end flex-grow-1 pe-3">
-                <Link to="/">Home</Link>
-                <Link to="/panel-usuario-favoritos">Favoritos</Link>
-                <Link to="/panel-usuario-datos">Actualizar datos</Link>
+                <Link to="/" className="user-menu">
+                  Home
+                </Link>
+                <Link to="/panel-usuario-favoritos" className="user-menu">
+                  Favoritos
+                </Link>
+                <Link to="/panel-usuario-datos" className="user-menu">
+                  Actualizar datos
+                </Link>
                 <Link to="/">
-                  <Button onClick={handleClick} className="btn-primary-full">
+                  <Button
+                    onClick={handleClick}
+                    className="text-uppercase user-menu-btn"
+                  >
                     Salir
                   </Button>
                 </Link>
@@ -40,18 +49,13 @@ export const HeaderButtons = () => {
           </Navbar.Offcanvas>
         </>
       ) : (
-        <>
-          <Col>
-            <Button className="btn-primary-outline text-uppercase">
-              Ingreso
+        <Col>
+          <Link to="/login-registrarse">
+            <Button className="text-uppercase btn-primary-outline">
+              Ingreso / Registro
             </Button>
-          </Col>
-          <Col>
-            <Button className="btn-primary-outline text-uppercase">
-              Registro
-            </Button>
-          </Col>
-        </>
+          </Link>
+        </Col>
       )}
     </Col>
   )

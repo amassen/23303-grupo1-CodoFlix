@@ -1,9 +1,9 @@
 /* Para los colores personalizados */
 :root {
-  --color-primary: #FDD306;
+  --color-primary: #fdd306;
   --color-secondary: #070000;
-  --color-gray: #D0D9D0;
-  --color-white: #FFF;
+  --color-gray: #d0d9d0;
+  --color-white: #fff;
 }
 
 /* 
@@ -49,24 +49,25 @@ la aplicacion para centrar elementos
 -color de fondo amarillo
 -borde amarillo
 -letras negras*/
-button.btn-primary-full {
+.btn-primary-full {
   background-color: var(--color-primary);
   border-color: var(--color-primary);
   color: var(--color-secondary);
 }
 
-button.btn-primary-full:hover {
+.btn-primary-full:hover {
   background-color: var(--color-secondary);
-  border-color: var(--color-psecondary);
+  border-color: var(--color-secondary);
   color: var(--color-white);
 }
+
 /* Para el BOTON SECUNDARIO AMARILLO:
 -color de fondo blanco
 -borde amarillo
 -letras negras*/
-button.btn-primary-outline {
+.btn-primary-outline {
   border-color: var(--color-primary);
-  color: var(--color-black);
+  color: var(--color-secondary);
   background-color: var(--color-white);
 }
 
@@ -74,8 +75,19 @@ button.btn-primary-outline {
 -color de fondo transparente
 -borde amarillo
 -letras negras*/
-button.btn-primary-outline {
+.btn-primary-outline {
   border: 2px solid var(--color-secondary);
-  color: var(--color-black);
+  color: var(--color-secondary);
   background-color: transparent;
+}
+
+.btn-primary-outline:hover {
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
+
+/* border negro */
+.border-primary {
+  border-color: var(--color-primary);
 }
