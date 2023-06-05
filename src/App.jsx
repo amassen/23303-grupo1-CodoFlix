@@ -25,7 +25,7 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login-registrarse" element={<LoginRegistrarse />} />
           <Route path="/registrarse" element={<Registrarse />} />
-          <Route path="/reproducir" element={<Reproducir />} />
+          <Route path="/reproducir" element={auth?<Reproducir />: <Home />} />
           <Route path="/review" element={<Review />} />
           <Route
             path="/panel-usuario-favoritos"
