@@ -12,11 +12,11 @@ import { PanelUsuarioDatos } from './pages/PanelUsuarioDatos'
 import { AdminUsuarios } from './pages/AdminUsuarios'
 import { AdminPeliculas } from './pages/AdminPeliculas'
 import { Error } from './pages/Error'
-import AuthContext from './context/AuthContext'
+import IsLoggedContext from './context/IsLoggedContext'
 import './App.css'
 
 function App() {
-  const { auth } = useContext(AuthContext)
+  const { isLogged } = useContext(IsLoggedContext)
 
   return (
     <>
@@ -26,15 +26,18 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/login-registrarse" element={<LoginRegistrarse />} />
           <Route path="/registrarse" element={<Registrarse />} />
-          <Route path="/reproducir" element={auth?<Reproducir />: <Home />} />
+          <Route
+            path="/reproducir"
+            element={isLogged ? <Reproducir /> : <Home />}
+          />
           <Route path="/review" element={<Review />} />
           <Route
             path="/panel-usuario-favoritos"
-            element={auth ? <PanelUsuarioFavoritos /> : <Home />}
+            element={isLogged ? <PanelUsuarioFavoritos /> : <Home />}
           />
           <Route
             path="/panel-usuario-datos"
-            element={auth ? <PanelUsuarioDatos /> : <Home />}
+            element={isLogged ? <PanelUsuarioDatos /> : <Home />}
           />
           <Route path="/admin-usuarios" element={<AdminUsuarios />} />
           <Route path="/admin-peliculas" element={<AdminPeliculas />} />

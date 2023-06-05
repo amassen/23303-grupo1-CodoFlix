@@ -1,28 +1,31 @@
-import React, { useContext } from 'react'
-import { Button, Col, Nav, Navbar, Offcanvas } from 'react-bootstrap'
-import AuthContext from '../../../context/AuthContext'
+import { useContext } from 'react'
 import { Link } from 'react-router-dom'
+import IsLoggedContext from '../../../context/IsLoggedContext'
+import { Button, Col, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 
 export const HeaderButtons = () => {
-  const { auth, handleAuth } = useContext(AuthContext)
-  const handleClick = () => {
-    handleAuth()
-  }
+  const { isLogged, handleIsLogedd } = useContext(IsLoggedContext)
+  const handleClick = () => handleIsLogedd()
 
   return (
     <Col xs={12} md={3}>
-      {auth ? (
+      {isLogged ? (
         <>
           <span>usuario</span>
-          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-false"> 
-          <img width="50" height="50" src="https://img.icons8.com/ios/50/user-male-circle--v1.png" alt="user-male-circle--v1"/>
+          <Navbar.Toggle aria-controls="offcanvasNavbar-expand-false">
+            <img
+              width="50"
+              height="50"
+              src="https://img.icons8.com/ios/50/user-male-circle--v1.png"
+              alt="user-male-circle--v1"
+            />
           </Navbar.Toggle>
           <Navbar.Offcanvas
             id="offcanvasNavbar-expand-false"
             aria-labelledby="offcanvasNavbarLabel-expand-false"
             placement="end"
           >
-            <Offcanvas.Header closeButton >
+            <Offcanvas.Header closeButton>
               <Offcanvas.Title id="offcanvasNavbarLabel-expand-false">
                 Usuario
               </Offcanvas.Title>
