@@ -1,4 +1,3 @@
-import React from 'react'
 import { Col, Navbar } from 'react-bootstrap'
 
 export const HeaderLogo = () => {
