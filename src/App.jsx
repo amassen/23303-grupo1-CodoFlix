@@ -33,7 +33,7 @@ function App() {
           />
           <Route
             path="/panel-usuario-datos"
-            element={auth ? <PanelUsuarioFavoritos /> : <Home />}
+            element={auth ? <PanelUsuarioDatos /> : <Home />}
           />
           <Route path="/admin-usuarios" element={<AdminUsuarios />} />
           <Route path="/admin-peliculas" element={<AdminPeliculas />} />
