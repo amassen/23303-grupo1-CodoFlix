@@ -149,17 +149,17 @@ export const RegisterForm = () => {
         </Col>
       </Row>
       <Container className="d-grid d-md-flex justify-content-center gap-4 my-3">
-        <BotonOutline
-          type="submit"
-          clasebtn={' btn-reject '}
-          texto="Cancelar"
-          onClick={handleCancel}
-        />
         <BotonPrimary
           type="submit"
           clasebtn={' btn-ok'}
           texto="Enviar"
           onClick={handleSubmit}
+        />
+        <BotonOutline
+          type="submit"
+          clasebtn={' btn-reject '}
+          texto="Cancelar"
+          onClick={handleCancel}
         />
       </Container>
     </Form>
