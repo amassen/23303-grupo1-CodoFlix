@@ -89,6 +89,7 @@ la aplicacion para centrar elementos
   color: var(--color-white);
   background-color: var(--color-secondary);
 }
+
 .bg{
     background-color:rgb(0, 0, 0);
     border-radius: 5%;
@@ -98,4 +99,10 @@ la aplicacion para centrar elementos
 /* border negro */
 .border-primary {
   border-color: var(--color-primary);
+}
+
+/* Para el boton de exito de sweetalert2*/
+.swal2-confirm {
+  background-color: var(--color-secondary)! important;
+  border: none!important;
 }

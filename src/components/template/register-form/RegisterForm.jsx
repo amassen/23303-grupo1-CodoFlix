@@ -18,11 +18,9 @@ export const RegisterForm = () => {
   }
   const [form, setForm] = useState(intialState)
   const [errors, setErrors] = useState({})
-  const tipo = 'submit'
 
   const setField = (field, value) => {
     setForm({ ...form, [field]: value })
-
     if (errors[field]) {
       setErrors({
         ...errors,
@@ -72,8 +70,8 @@ export const RegisterForm = () => {
 
   const handleCancel = (e) => {
     e.preventDefault()
-    showMsg('error', 'Envio Cancelado', 'Se cancelo el envío.')
     setForm(intialState)
+    showMsg('error', 'Envio Cancelado', 'Se cancelo el envío.')
   }
 
   return (
@@ -91,7 +89,6 @@ export const RegisterForm = () => {
             feedbackType="invalid"
             typeError={errors.name}
           />
-
           <FormGroup
             type="text"
             texto="Apellido"
@@ -103,7 +100,6 @@ export const RegisterForm = () => {
             feedbackType="invalid"
             typeError={errors.lastName}
           />
-
           <FormGroup
             type="number"
             texto="Telefono"
@@ -128,7 +124,6 @@ export const RegisterForm = () => {
             feedbackType="invalid"
             typeError={errors.mail}
           />
-
           <FormGroup
             type="password"
             texto="Contraseña"
@@ -140,7 +135,6 @@ export const RegisterForm = () => {
             feedbackType="invalid"
             typeError={errors.pass}
           />
-
           <FormGroup
             type="password"
             texto="Confirme contraseña"
@@ -156,13 +150,13 @@ export const RegisterForm = () => {
       </Row>
       <Container className="d-grid d-md-flex justify-content-center gap-4 my-3">
         <BotonOutline
-          type={tipo}
+          type="submit"
           clasebtn={' btn-reject '}
           texto="Cancelar"
           onClick={handleCancel}
         />
         <BotonPrimary
-          type={tipo}
+          type="submit"
           clasebtn={' btn-ok'}
           texto="Enviar"
           onClick={handleSubmit}
