@@ -1,3 +1,6 @@
+
+
+
 /* Para los colores personalizados */
 :root {
   --color-primary: #fdd306;
@@ -13,7 +16,7 @@ y el footer no quede volando. Simula un contenedor
 con un maximo de ancho y centrado
 */
 .fullHeight-max-width-980 {
-  min-height: 94vh;
+  min-height: 86vh;
   max-width: 980px;
   margin: 0 auto;
 }
@@ -87,7 +90,19 @@ la aplicacion para centrar elementos
   background-color: var(--color-secondary);
 }
 
+.bg{
+    background-color:rgb(0, 0, 0);
+    border-radius: 5%;
+
+}
+
 /* border negro */
 .border-primary {
   border-color: var(--color-primary);
+}
+
+/* Para el boton de exito de sweetalert2*/
+.swal2-confirm {
+  background-color: var(--color-secondary)! important;
+  border: none!important;
 }

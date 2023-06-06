@@ -1,0 +1,20 @@
+
+.btn-ok{
+    background-color:#FDD306;
+    color:black;
+    border-color:#FDD306;
+}
+.btn-ok:hover{
+    background-color:rgb(63, 63, 63);
+    color:white;
+    border-color:white;
+}
+
+.btn-reject{
+    border-color:white;
+    color:white;
+}
+.btn-reject:hover{
+    background-color: #FDD306;
+    color:white;
+}
