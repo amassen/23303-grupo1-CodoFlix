@@ -4,7 +4,7 @@ import { useForm } from '../../../hooks/useForm'
 import { LabelInput } from '../../atom/LabelInput'
 import Loader from '../../atom/Loader'
 import Message from '../../atom/Message'
-import { initialForm, ERROR_REQUIRED, ERROR_MSG } from './utils'
+import { initialForm } from './utils'
 import {
   regexName,
   regexEmail,
@@ -12,6 +12,7 @@ import {
   regexComments
 } from '../../../utils/constants'
 import { HeadlineH2 } from '../../atom/Headlineh2'
+import { ERROR_MSG, ERROR_REQUIRED } from '../../../utils/formsMessages'
 
 const validationsForm = (form) => {
   let errors = {}

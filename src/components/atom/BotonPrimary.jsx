@@ -1,4 +1,4 @@
-import { Button } from "react-bootstrap"
+import { Button } from 'react-bootstrap'
 
 /* Botón primary */
 /* Clasebtn recibe las clases css, tipo recibe el atributo type,
@@ -10,13 +10,19 @@ import { Button } from "react-bootstrap"
     <BotonPrimary type={tipo} 
                   clasebtn={" btn-ok"}
                   texto="Aceptar" 
-                  enClick={handleSubmit}
+                  onClick={handleSubmit}
     />
   */
-export default function BotonPrimary({clasebtn, tipo,texto,enClick}) {
+export default function BotonPrimary({ clasebtn, tipo, texto, onClick }) {
   return (
     <>
-       <Button variant={`btn btn-primary${clasebtn}`} type={tipo} onClick={enClick}>{texto}</Button>{' '}
+      <Button
+        variant={`btn btn-primary${clasebtn}`}
+        type={tipo}
+        onClick={onClick}
+      >
+        {texto}
+      </Button>{' '}
     </>
   )
 }
