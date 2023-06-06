@@ -16,7 +16,7 @@ y el footer no quede volando. Simula un contenedor
 con un maximo de ancho y centrado
 */
 .fullHeight-max-width-980 {
-  min-height: 96vh;
+  min-height: 86vh;
   max-width: 980px;
   margin: 0 auto;
 }
