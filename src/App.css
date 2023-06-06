@@ -1,6 +1,101 @@
+
+
+
+/* Para los colores personalizados */
+:root {
+  --color-primary: #fdd306;
+  --color-secondary: #070000;
+  --color-gray: #d0d9d0;
+  --color-white: #fff;
+}
+
+/* 
+Clase para aplicar a los divs o sections contenedores 
+de cada pagina para que tengan un minimo de alto 
+y el footer no quede volando. Simula un contenedor 
+con un maximo de ancho y centrado
+*/
+.fullHeight-max-width-980 {
+  min-height: 94vh;
+  max-width: 980px;
+  margin: 0 auto;
+}
+
+.fullHeight {
+  min-height: 94vh;
+  max-width: 980px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+}
+
+/* 
+Clase que se puede reutilizar en toda 
+la aplicacion para centrar elementos 
+*/
+.center-elements {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+/* Para poder personalizar el componente boton de bootstrap*/
+
+/* Para el BOTON PRIMARIO AMARILLO:
+-color de fondo amarillo
+-borde amarillo
+-letras negras*/
+.btn-primary-full {
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
+  color: var(--color-secondary);
+}
+
+.btn-primary-full:hover {
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  color: var(--color-white);
+}
+
+/* Para el BOTON SECUNDARIO AMARILLO:
+-color de fondo blanco
+-borde amarillo
+-letras negras*/
+.btn-primary-outline {
+  border-color: var(--color-primary);
+  color: var(--color-secondary);
+  background-color: var(--color-white);
+}
+
+/* Para el BOTON SECUNDARIO NEGRO
+-color de fondo transparente
+-borde amarillo
+-letras negras*/
+.btn-primary-outline {
+  border: 2px solid var(--color-secondary);
+  color: var(--color-secondary);
+  background-color: transparent;
+}
+
+.btn-primary-outline:hover {
+  border: none;
+  color: var(--color-white);
+  background-color: var(--color-secondary);
+}
 .bg{
     background-color:rgb(0, 0, 0);
     border-radius: 5%;
 
 }
 
+/* border negro */
+.border-primary {
+  border-color: var(--color-primary);
+}

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 import { Form, Row, Col, Container } from 'react-bootstrap';
 import FormGroup from '../components/template/FormGroup';
 import { useState } from 'react';
@@ -6,6 +7,9 @@ import { regexPhone,regexEmail } from '../utils/constants';
 import BotonPrimary from '../components/atom/BotonPrimary';
 import BotonOutline from '../components/atom/BotonOutline';
 import "../components/atom/btncolors.css"
+=======
+import { HeadlineH2 } from '../components/atom/Headlineh2'
+>>>>>>> main
 
 export const Registrarse = () => {
 

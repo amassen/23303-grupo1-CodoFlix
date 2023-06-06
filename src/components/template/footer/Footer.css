@@ -1,11 +1,11 @@
 footer {
-  background-color: #070000;
-  color: #fff;
+  background-color: var(--color-secondary);
+  color: var(--color-white);
 }
 
 .btn-contact{
-  border: 1px solid #fff;
-  background-color: #070000;
+  border: 1px solid var(--color-white);
+  background-color: var(--color-secondary);
   text-transform: uppercase;
   margin-top: 6px;
   border-radius: 7px;
@@ -17,6 +17,6 @@ footer {
 
 .btn-contact:hover{
   border: none;
-  background-color: #FDD306;
-  color: #070000;
+  background-color: var(--color-primary);
+  color: var(--color-black);
 }

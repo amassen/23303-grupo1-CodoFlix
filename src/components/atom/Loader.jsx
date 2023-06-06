@@ -1,6 +1,7 @@
 import React from 'react'
-import { Col, Container, Row } from 'react-bootstrap'
+import { Col, Row } from 'react-bootstrap'
 import Spinner from 'react-bootstrap/Spinner'
+import './Loader.css'
 
 /* Loader que recibe como props:
  * - animation: si no la recibe como prop por default es 'border',
@@ -13,9 +14,9 @@ import Spinner from 'react-bootstrap/Spinner'
  */
 const Loader = ({ animation, variant, textHidden, text }) => {
   return (
-    <Container fluid>
-      <Row className="py-3">
-        <Col className="col-sm-12" sm={{ span: 10, offset: 2 }}>
+    <section className="loader-container">
+      <div className="loader">
+        <div>
           <Spinner
             animation={animation ? animation : 'border'}
             role="status"
@@ -25,10 +26,10 @@ const Loader = ({ animation, variant, textHidden, text }) => {
               {textHidden ? textHidden : 'Cargando...'}
             </span>
           </Spinner>
-        </Col>
-        <Col className="col-sm-12 text-center" >{text ? text : ''}</Col>
-      </Row>
-    </Container>
+        </div>
+        <div className="col-sm-12 text-center" >{text ? text : ''}</div>
+      </div>
+    </section>
   )
 }
 
