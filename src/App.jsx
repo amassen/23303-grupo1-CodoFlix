@@ -43,7 +43,7 @@ function App() {
           <Route path="/admin-peliculas" element={<AdminPeliculas />} />
           <Route path="*" element={<Error />} />
         </Routes>
-        <Footer />
+        {!isLogged && <Footer />}
       </BrowserRouter>
     </>
   )

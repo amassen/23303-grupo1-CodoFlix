@@ -2,13 +2,14 @@ import { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import IsLoggedContext from '../../../context/IsLoggedContext'
 import { Button, Col, Nav, Navbar, Offcanvas } from 'react-bootstrap'
+import { FooterContact } from '../footer/FooterContact'
 
 export const HeaderButtons = () => {
   const { isLogged, handleIsLogedd } = useContext(IsLoggedContext)
   const handleClick = () => handleIsLogedd()
 
   return (
-    <Col xs={12} md={3}>
+    <Col xs={7} md={3} className="avatar-icon">
       {isLogged ? (
         <>
           <span>usuario</span>
@@ -41,6 +42,7 @@ export const HeaderButtons = () => {
                 <Link to="/panel-usuario-datos" className="user-menu">
                   Actualizar datos
                 </Link>
+                <FooterContact text="contacto" />
                 <Link to="/">
                   <Button
                     onClick={handleClick}
