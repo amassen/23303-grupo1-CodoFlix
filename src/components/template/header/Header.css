@@ -8,6 +8,7 @@ header {
   color: var(--color-secondary);
   margin-bottom: 0.75rem;
   font-weight: 700;
+  width: 160px;
 }
 
 .user-menu:hover {
@@ -21,12 +22,18 @@ header {
   -o-border-radius: 7px;
 } 
 
+/* El bonton de contacto */
+.btn-contact {
+  width: 160px;
+  margin: 12px 0px;
+}
 /* El boton de salir*/
 .user-menu-btn {
   color: var(--color-secondary);
   background-color: var(--color-primary);
   border: none;
   font-weight: 700;
+  width: 160px;
 }
 
 .user-menu-btn:hover {
