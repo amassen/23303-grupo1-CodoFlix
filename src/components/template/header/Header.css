@@ -20,7 +20,7 @@ header {
   -moz-border-radius: 7px;
   -ms-border-radius: 7px;
   -o-border-radius: 7px;
-} 
+}
 
 /* El bonton de contacto */
 .btn-contact {
@@ -50,5 +50,11 @@ header {
 
 .navbar-toggler {
   border: none;
-  margin: 0px 12px
+  margin: 0px 12px;
+}
+
+.avatar-icon {
+  display: flex !important;
+  justify-content: flex-end;
+  align-items: center;
 }

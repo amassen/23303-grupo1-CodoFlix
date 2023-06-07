@@ -9,7 +9,7 @@ export const HeaderButtons = () => {
   const handleClick = () => handleIsLogedd()
 
   return (
-    <Col xs={12} md={3}>
+    <Col xs={7} md={3} className="avatar-icon">
       {isLogged ? (
         <>
           <span>usuario</span>
