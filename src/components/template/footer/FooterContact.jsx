@@ -9,7 +9,7 @@ export const FooterContact = ({ text }) => {
   const [isOpenModal, openModal, closeModal] = useModal(false)
 
   return (
-    <div className="col-sm-12 col-md-3 text-sm-left">
+    <div className="col-sm-12 col-md-3 text-sm-center">
       <Button onClick={openModal} className="btn-contact">
         <Envelope style={{ marginRight: '6px' }} />
         {text}
