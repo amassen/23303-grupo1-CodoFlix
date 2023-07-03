@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { helpHttp } from '../helpers/helpHttp'
+import Swal from 'sweetalert2'
 
 export const useForm = (initialForm, validateForm) => {
   const [form, setForm] = useState(initialForm)
@@ -21,11 +22,32 @@ export const useForm = (initialForm, validateForm) => {
     setErrors(validateForm(form))
   }
 
+  const sweetAlertConfirmation = () => {
+    let timerInterval
+    Swal.fire({
+      title: 'Enviando formulario',
+      html: 'Se está procesando el envío de datos.',
+      timer: 2000,
+      timerProgressBar: true,
+      didOpen: () => {
+        Swal.showLoading()
+      },
+      willClose: () => {
+        clearInterval(timerInterval)
+      }
+    }).then((result) => {
+      if (result.dismiss === Swal.DismissReason.timer) {
+        console.log('Fui cerrado con el timer')
+      }
+    })
+  }
+
   const handleSubmit = (e) => {
     e.preventDefault()
     setErrors(validateForm(form))
 
     if (Object.keys(errors).length === 0) {
+      sweetAlertConfirmation()
       setLoading(true)
       helpHttp()
         .post('https://formsubmit.co/ajax/costamariaeugenia1@gmail.com', {
