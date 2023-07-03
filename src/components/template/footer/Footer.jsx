@@ -3,18 +3,17 @@ import { FooterLogo } from './FooterLogo'
 import { FooterContact } from './FooterContact'
 import { FooterCopyright } from './FooterCopyright'
 import './Footer.css'
-import { Container, Row } from 'react-bootstrap'
 
 export const Footer = () => {
   return (
     <footer>
-      <Container className="container-lg py-3">
-        <Row className="row">
+      <div className="container-lg py-3">
+        <div className="row">
           <FooterLogo text="CodoFlix" />
           <FooterContact text="contacto" />
           <FooterCopyright />
-        </Row>
-      </Container>
+        </div>
+      </div>
     </footer>
   )
 }
