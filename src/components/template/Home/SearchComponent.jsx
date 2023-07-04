@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import axios from 'axios';
 
 const SearchComponent = () => {
   const [movies, setmovies] = useState([]);
@@ -9,13 +10,20 @@ const SearchComponent = () => {
 const API_KEY = "14e4b022e185e0d7da5d814d71c2996c";
 const URL_IMAGE = "https://image.tmdb.org/t/p/original";
 
-  const showData = async () => {
-    const response = await fetch(`${URL}${API_KEY}&query=${searchInput}`);
-    const data = await response.json();
-    const moviessArray = data.results;
-    setmovies(moviessArray);
-    console.log(moviessArray);
-  };
+
+
+const showData = async () => {
+  try {
+    const response = await axios.get(`${URL}${API_KEY}&query=${searchInput}`);
+    const data = response.data;
+    const moviesArray = data.results;
+    setmovies(moviesArray);
+   // console.log(moviesArray);
+  } catch (error) {
+    console.error(error);
+  }
+};
+
 
   const searcher = (e) => {
     setSearchInput(e.target.value);
