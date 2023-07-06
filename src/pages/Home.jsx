@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadlineH2 } from '../components/atom/Headlineh2'
+import { HeadlineH2 } from '../components/atom/HeadlineH2'
 import SearchComponent from '../components/template/Home/SearchComponent';
 import ShowDiscover from '../components/template/Home/ShowDiscover';
 import ShowPopular from '../components/template/Home/ShowPopular';
