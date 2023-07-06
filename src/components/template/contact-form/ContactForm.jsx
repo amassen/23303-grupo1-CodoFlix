@@ -11,7 +11,7 @@ import {
   regexPhone,
   regexComments
 } from '../../../utils/constants'
-import { HeadlineH2 } from '../../atom/Headlineh2'
+import { HeadlineH2 } from '../../atom/HeadlineH2'
 
 const validationsForm = (form) => {
   let errors = {}
