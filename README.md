@@ -8,12 +8,10 @@
 | -------------------- | ------------------------------------------------------------------------ | ------------------------------------------------------------------------ |
 | Bomba, Santiago Maximilianoa | | [sanmaximilianb](https://www.linkedin.com/in/sanmaximilianb/) |
 | Fernandez Sancho, Mercedes | | [mercedes-fernandez-sancho-](https://www.linkedin.com/in/mercedes-fernandez-sancho-/) |
-| Notario, Katherine| | |
 | Sánchez, Silvina | | [silvina-n-s%C3%A1nchez](https://www.linkedin.com/in/silvina-n-s%C3%A1nchez) |
 | Massenzano, Adriana| | |
 | Corradi, Carolina | | |
 | Bouza, Karina Beatriz| | [karina-beatriz-bouza](https://www.linkedin.com/in/karina-beatriz-bouza/)|
-| Perez, Jose | | [jose-alfredo-perez-angola](https://www.linkedin.com/in/jose-alfredo-perez-angola/) |
 | Cobas, María Paula | | |
 | Costa, María Eugenia | [eugenia1984](https://github.com/eugenia1984)                            | [maríaeugeniacosta](https://www.linkedin.com/in/mar%C3%ADaeugeniacosta/) |
 
