@@ -58,6 +58,7 @@
 | [Documentación](https://drive.google.com/file/d/1i4DSEKeglpzc37MCkg9vjE8FkB_Be6Zz/view?usp=sharing) |
 | [Prototipo de funcionalidad](https://www.canva.com/design/DAFjp8ub3dc/_jN7Kz8VaflIZ1ckrcFOLA/edit) |
 | [Trello](https://trello.com/b/5RCjM4W1/233031) |
+| [Live](https://23303-grupo1-codoflix.netlify.app/) |
 
 ---
 
