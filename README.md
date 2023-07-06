@@ -55,7 +55,7 @@
 | --- |
 | Presentación |
 | [Maquetado](https://www.figma.com/file/1SN3hGkV9PiyPnATkkjBEe/flix?node-id=0%3A1&t=o7udgvMghHFwK4lW-1) |
-| Documentación |
+| [Documentación](https://github.com/amassen/23303-grupo1-CodoFlix/blob/main/Documentaci%C3%B3n%20Grupo%201%20Comisi%C3%B3n%2023303.pdf) |
 | [Prototipo de funcionalidad](https://www.canva.com/design/DAFjp8ub3dc/_jN7Kz8VaflIZ1ckrcFOLA/edit) |
 | [Trello](https://trello.com/b/5RCjM4W1/233031) |
 
