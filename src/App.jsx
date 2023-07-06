@@ -1,7 +1,7 @@
 import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import { Home } from './pages/Home'
 import { Footer } from './components/template/footer/Footer'
-import { Header } from './components/template/template/header/Header.jsx'
+import { Header } from './components/template/header/Header.jsx'
 import { LoginRegistrarse } from './pages/LoginRegistrarse'
 import { Registrarse } from './pages/Registrarse'
 import { Reproducir } from './pages/Reproducir'
