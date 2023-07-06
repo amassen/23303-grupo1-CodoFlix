@@ -1,5 +1,5 @@
 import React from 'react'
-import { HeadlineH2 } from '../components/atom/Headlineh2'
+import { HeadlineH2 } from '../components/atom/HeadlineH2'
 import Reproductor from '../components/Reproducir/Reproductor'
 import CardDataMovie from '../components/Reproducir/CardDataMovie'
 
