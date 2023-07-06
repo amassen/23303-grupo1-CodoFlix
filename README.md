@@ -63,7 +63,7 @@
 
 ## <img src="https://img.icons8.com/dusk/40/null/goal.png" alt="icono de dardo en tablero" widht="40" height="40" /> Objetivo
 
-Integrar todos los contenidos vistos durante de la cursa de **React** en **Codo a Codo** en una interfaz, prototipo y diseño web funcional.
+Integrar todos los contenidos vistos durante de la cursada de **React** en **Codo a Codo** en una interfaz, prototipo y diseño web funcional.
 
 ---
 
