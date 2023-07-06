@@ -1,4 +1,4 @@
-import { HeadlineH2 } from '../components/atom/Headlineh2'
+import { HeadlineH2 } from '../components/atom/HeadlineH2'
 import LoginForm from '../components/template/login-form/LoginForm'
 
 export const LoginRegistrarse = () => {
