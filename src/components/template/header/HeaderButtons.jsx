@@ -5,9 +5,10 @@ import { Button, Col, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import { FooterContact } from '../footer/FooterContact'
 
 export const HeaderButtons = () => {
-  const { isLogged, handleIsLogedd } = useContext(IsLoggedContext)
-  const handleClick = () => handleIsLogedd()
-
+  //const { isLogged, handleIsLogedd } = useContext(IsLoggedContext)
+ const [isLogged, setIsLogged] = useState(true)
+  const handleClick = () => setIsLogged(!isLogged)
+  
   return (
     <Col xs={7} md={3} className="avatar-icon">
       {isLogged ? (
