@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import {  Link } from 'react-router-dom';
 import axios from 'axios';
 
 const ShowDiscover = () => {
@@ -25,29 +26,49 @@ const getMoviesInfo = async () => {
     getMoviesInfo();
   }, []);
 
+
+
+
   return (
-    <div>
-      <table className="table table-striped table-hover mt-5 shadow-lg">
-        <thead>
-          <tr className="bg-curso text-white">
-          </tr>
-        </thead>
-        <tbody>
-          {moviesArray.map((el) => (
-            <tr key={el.id}>
-              <td>
-                <a href={`/reproducir/${el.id}`} target="_blank" rel="noopener noreferrer">
-                  {el.original_title}
-                </a>
-                {el.release_date}
-                <img src={`${URL_IMAGE + el.poster_path}`} alt="" height={600} width="100%" />
-              </td>
-             
-            </tr>
-          ))}
-        </tbody>
-      </table>
+
+    <div className="container">
+    <div id="carousel1" className="carousel slide" data-bs-ride="carousel">
+      <div className="carousel-inner">
+        {moviesArray.map((movie, index) => (
+          <div className={`carousel-item ${index === 0 ? 'active' : ''}`} key={index}>
+            <div className="row">
+              {moviesArray.slice(index, index + 4).map((movieItem) => (
+                <div className="col-md-3 p-2 d-flex align-items-stretch" key={movieItem.id}>
+                  <div className="card m-6" style={{ width: "18rem" }}>
+                   
+                      <img className="card-img-top .img-fluid .img-thumbnail" src={`${URL_IMAGE + movieItem.poster_path}`} alt="Card image cap" />
+                      <div className="card-body">
+                        <div className="d-flex flex-column">
+                          <ul className="list-group list-group-flush">
+                          <Link to={`/reproducir/${movieItem.id}`} style={{ textDecoration: "none" }}>     <li className="list-group-item fs-3">{movieItem.original_title}</li></Link>
+                            <li className="list-group-item fs-6">Fecha de estreno: {movieItem.release_date}</li>
+                          </ul>
+                        </div>
+                      </div>
+                   
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <button className="carousel-control-prev" type="button" data-bs-target="#carousel1" data-bs-slide="prev">
+        <span className="carousel-control-prev-icon bg-yellow" aria-hidden="true"style={{ fontSize: "2rem" }}></span>
+      </button>
+      <button className="carousel-control-next" type="button" data-bs-target="#carousel1" data-bs-slide="next">
+        <span className="carousel-control-next-icon bg-yellow" aria-hidden="true" style={{ fontSize: "2rem" }}></span>
+      </button>
     </div>
+  </div>
+
+
+
   );
 };
 
