@@ -27,7 +27,7 @@ export default function CardData(props) {
                         >
                           <ListGroup.Item>
                             <span className="fs-2 text-uppercase">
-                              {props.showData.name}
+                              {props.showData.original_title}
                             </span>{" "}
                             <span className="fs-6">{props.status}</span>
                           </ListGroup.Item>
