@@ -15,7 +15,7 @@ export const Error = () => {
         </Col>
         <Col xs={12} md={7} className="center-elements px-5 py-5">
           <HeadlineH2 headlineText="AWWW . . . NO LLORES" />
-          <p>Es solo un error 400!</p>
+          <p>Es solo un error 404!</p>
           <p>
             Lo que busca puede haberse extraviado en la memoria a largo plazo.
           </p>

@@ -4,16 +4,36 @@ import IsLoggedContext from '../../../context/IsLoggedContext'
 import { Button, Col, Nav, Navbar, Offcanvas } from 'react-bootstrap'
 import { FooterContact } from '../footer/FooterContact'
 
+//Parte del Login y estado en la barra de usuario
+import {UserAuth} from '../../../context/AuthContext'
+// sin funcionalidades, da ok iniciar sesion solo con poner un mail y una contraseña que entre en los parametros
+
 export const HeaderButtons = () => {
-  //const { isLogged, handleIsLogedd } = useContext(IsLoggedContext)
- const [isLogged, setIsLogged] = useState(true)
+
+  // manejo del login y estados
+  const {user,logOut}=UserAuth;
+  
+  // manejo del login y estados
+
+
+  // const { isLogged, handleIsLogged } = useContext(IsLogedContext)
+  // handleIsLogedd no existe
+ const [isLogged, setIsLogged] = useState(null)
+//  null = no logueado true = si logueado
   const handleClick = () => setIsLogged(!isLogged)
   
+  // aca va el nombre del usuario que seria el correo o proximamente el usuario que uno almacene
+  // const userName='Usr_DB_Firebase'
+  const userName='user?.email'
+
+
   return (
     <Col xs={7} md={3} className="avatar-icon">
-      {isLogged ? (
+      {/* { isLogged ? (  */}
+      { user?.email ? ( 
         <>
-          <span>usuario</span>
+      
+          <span>Usuario {userName}</span>
           <Navbar.Toggle aria-controls="offcanvasNavbar-expand-false">
             <img
               width="50"
@@ -40,7 +60,7 @@ export const HeaderButtons = () => {
                 <Link to="/panel-usuario-favoritos" className="user-menu">
                   Favoritos
                 </Link>
-                <Link to="/panel-usuario-datos" className="user-menu">
+                <Link to="/panel-usuario" className="user-menu">
                   Actualizar datos
                 </Link>
                 <FooterContact text="contacto" />

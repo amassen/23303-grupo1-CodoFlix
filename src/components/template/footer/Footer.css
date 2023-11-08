@@ -1,6 +1,8 @@
 footer {
+  
   background-color: #070000;
   color: #fff;
+  width: 100%;
 }
 
 .btn-contact{
@@ -16,7 +18,8 @@ footer {
 }
 
 .btn-contact:hover{
-  border: none;
-  background-color: #FDD306;
-  color: #070000;
+  /* border: none; */
+  border: 1px solid #000;
+  background-color: #FDD306 !important;
+  color: #070000 !important;
 }

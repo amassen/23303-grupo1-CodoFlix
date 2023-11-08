@@ -1,5 +1,6 @@
 header {
-  background-color: var(--color-primary);
+  /* background-color: var(--color-primary); */
+  background-color: #FDD306;
   padding: 0.5rem 0rem;
 }
 

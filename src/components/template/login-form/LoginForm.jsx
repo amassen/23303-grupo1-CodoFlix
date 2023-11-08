@@ -1,3 +1,45 @@
+/*
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+DEPRECATED ERASEME PLEASE!!!!!!!!!
+*/
 import React, {useState} from 'react'
 import BotonOutline from '../../atom/BotonOutline'
 import BotonPrimary from '../../atom/BotonPrimary'
@@ -8,11 +50,13 @@ import FormGroup from '../register-form/FormGroup'
 import Swal from 'sweetalert2'
 import { Link } from 'react-router-dom';
 
-export default function LoginForm() {
-    const initialState = {
-        mail: '',
-        pass: ''
-      }
+
+  export default function LoginForm() {
+      const initialState = {
+          mail: '',
+          pass: ''
+        }
+
     const [form, setForm] = useState(initialState)
     const [errors, setErrors] = useState({})
     
@@ -32,7 +76,7 @@ export default function LoginForm() {
         const newErrors = {}
 
         if (!mail || !regexEmail.test(mail.trim())) newErrors.mail = ERROR_MSG.email
-        if (!pass || !regexPass.test(pass.trim()))
+        // if (!pass || !regexPass.test(pass.trim()))
             newErrors.pass = ERROR_MSG.firstPassword
     return newErrors
     }
@@ -58,14 +102,16 @@ export default function LoginForm() {
             showMsg('success', 'Estás logueado', 'Bienvenido!')
           }
         }
-    const handleCancel = (e) => {
-        e.preventDefault()
-        setForm(initialState)
-        showMsg('error', 'Login cancelado', 'No estás logueado.')
-        }
+    // const handleCancel = (e) => {
+    //     e.preventDefault()
+    //     setForm(initialState)
+    //     showMsg('error', 'Login cancelado', 'No estás logueado.')
+    //     }
+    // Comentado no tiene uso real
 
     const handleRegister=(e)=>{
         e.preventDefault()
+        
         //LO que haga 
      
     }
@@ -120,12 +166,13 @@ export default function LoginForm() {
           texto="Enviar"
           onClick={handleSubmit}
         />
-        <BotonOutline
-          type="submit"
-          clasebtn={' btn-reject '}
-          texto="Cancelar"
-          onClick={handleCancel}
-        />
+        
+          {/* <BotonOutline
+            type="submit"
+            clasebtn={' btn-reject text-white'} // se puso text white para poder ver el boton
+            texto="Cancelar"
+            onClick={handleCancel}
+          /> */}
       </Container>
     </Form>
   )

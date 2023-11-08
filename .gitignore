@@ -22,3 +22,6 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+#Archivo de configuracion de firebase y apis usadas
+.env

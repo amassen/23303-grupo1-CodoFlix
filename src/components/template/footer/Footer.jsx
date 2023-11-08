@@ -6,7 +6,7 @@ import './Footer.css'
 
 export const Footer = () => {
   return (
-    <footer>
+    <footer className=''>
       <div className="container-lg py-3">
         <div className="row">
           <FooterLogo text="CodoFlix" />
